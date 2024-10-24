@@ -19,7 +19,7 @@ const connect = function () {
   });
 
   conn.on("connect", () => {
-  conn.write("Hello from client!");
+  conn.write("Name: EDG");
   });
   
   return conn;
