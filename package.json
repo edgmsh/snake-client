@@ -1,0 +1,22 @@
+{
+  "name": "snake-client",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "chai"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/edgmsh/snake-client.git"
+  },
+  "author": "Ed",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/edgmsh/snake-client/issues"
+  },
+  "homepage": "https://github.com/edgmsh/snake-client#readme",
+  "dependencies": {
+    "undici": "^6.20.1"
+  }
+}

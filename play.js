@@ -2,4 +2,10 @@ const { connect } = require('./client.js');
 const net = require("net");
 
 console.log("Connecting ...");
-connect();
+connObj = connect();
+
+connObj.write("Move: up");
+
+setInterval(() => {
+  connObj.write("Move: up");
+}, 100);
