@@ -1,11 +1,22 @@
 const { connect } = require('./client.js');
-const net = require("net");
 
-console.log("Connecting ...");
+const setupInput = function () {
+  const stdin = process.stdin;
+  //stdin.setRawMode(true);
+  if (process.stdin.isTTY) {
+    stdin.stdin.setRawMode(true);
+  }   
+  stdin.setEncoding("utf8");
+  stdin.resume();
+  stdin.on("data", handleUserInput);
+  return stdin;
+};
+
+const handleUserInput = function (key) {
+  if (key === "\u0003") {
+    process.exit();
+  }
+};
+
 connObj = connect();
-
-connObj.write("Move: up");
-
-setInterval(() => {
-  connObj.write("Move: up");
-}, 100);
+stdinObj = setupInput();
