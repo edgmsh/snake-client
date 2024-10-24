@@ -1,14 +1,6 @@
-let connection;
-const movementCommands = {
-  'w': 'Move up',
-  'a': 'Move left',
-  's': 'Move down',
-  'd': 'Move right',
-  'q': 'Say: Done for 2day',
-  'h': 'Say: Hi everyone',
-  'i': 'Say: Im the best'
-};
+const { movementCommands } = require("./constants");
 
+let connection;
 
 const handleUserInput = function(key) {
   if (key === "\u0003") {
